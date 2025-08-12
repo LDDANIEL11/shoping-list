@@ -1,0 +1,111 @@
+body {
+  background-color: black;
+}
+
+.top {
+  background-color: cadetblue;
+}
+
+.bottom {
+  background-color: coral;
+}
+
+.bg-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.top-right {
+  background-color: red;
+  padding: 175px;
+  margin-top: 0;
+  margin-right: 250px;
+  margin-left: auto;
+  margin-bottom: auto;
+  flex: 0;
+}
+.top-left {
+  background-color: yellowgreen;
+  padding: 200px;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
+.bottom-right {
+  background-color: goldenrod;
+  padding: 175px;
+}
+
+.bottom-left {
+  background-color: blue;
+  padding: 150px;
+  margin-bottom: 0;
+  margin-left: 350px;
+  margin-top: 65px;
+  margin-right: auto;
+  flex: 0;
+}
+
+.blur {
+  z-index: 5;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-backdrop-filter: blur(175px);
+  backdrop-filter: blur(175px);
+}
+
+.overlay {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(182, 180, 180, 0.501);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 150px 250px;
+  border: 3px solid rgba(181, 180, 180, 0.293);
+  border-radius: 9px;
+  position: absolute;
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+  z-index: 10;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input {
+  margin: 15px;
+  padding: 5px 100px;
+}
+
+button {
+  color: #f1f1f1;
+  background-color: rgb(108, 74, 74);
+  padding: 5px 30px;
+  border: 3px solid rgb(108, 74, 74);
+  border-radius: 9px;
+}
+
+button:hover {
+  background-color: rgb(98, 67, 67);
+  border-color: rgb(98, 67, 67);
+}
+
+button:active {
+  background-color: rgb(79, 55, 55);
+  border-color: rgb(79, 55, 55);
+}
