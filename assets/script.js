@@ -1,7 +1,30 @@
 "use strict";
 
-document.querySelector(".btn").addEventListener("click", shoppingCart());
+const btn = document.querySelector(".btn");
+let input = document.querySelector("#input");
+const ul = document.querySelector(".list");
 
-//https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/DOM_scripting#active_learning_basic_dom_manipulation
+btn.addEventListener("click", function (e) {
+  const li = document.createElement("li");
+  let value = input.value;
+  const dltBtn = document.createElement("button");
+  const span = document.createElement("span");
+  span.textContent = value;
+  dltBtn.style.padding = "5px 10px";
+  dltBtn.style.backgroundColor = "rgb(182, 180, 180)";
+  dltBtn.style.border = "3px solid rgb(182, 180, 180)";
+  dltBtn.style.margin = "10px";
+  dltBtn.textContent = "Delete";
+  dltBtn.addEventListener("click", function () {
+    span.remove();
+    li.remove();
+    dltBtn.remove();
+  });
 
-//https://eloquentjavascript.net/15_event.html
+  li.appendChild(span);
+  li.appendChild(dltBtn);
+  ul.appendChild(li);
+
+  e.preventDefault();
+  input.focus();
+});
