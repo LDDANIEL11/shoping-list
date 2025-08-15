@@ -111,12 +111,8 @@ button:active {
 }
 
 .shopping-cart {
-  display: none;
+  display: flex;
   flex-direction: column;
-  background-color: rgba(182, 180, 180, 0.501);
-  padding: 10px 30px;
   margin: 15px;
-  -webkit-backdrop-filter: blur(3px);
-  backdrop-filter: blur(3px);
   z-index: 10;
 }
